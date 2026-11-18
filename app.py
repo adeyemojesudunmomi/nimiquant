@@ -1,5 +1,5 @@
 """
-NimiQuant — Multi-Chain Active Trade Scanner + Live PnL, Telegram Commands & CSV Export
+NimiQuant Crypto Intelligence Engine — Multi-Chain Active Trade Scanner + Live PnL, Telegram Commands & CSV Export
 Project 6.0 | Built by Nimi
 
 High-precision dual-timeframe verification (exact Daily + 4-Hour OHLCV candles),
@@ -235,7 +235,7 @@ def handle_telegram_commands(bot_token, chat_id, min_vol_ratio, min_liquidity, m
                 if "/status" in text:
                     send_telegram_message(
                         bot_token, chat_id,
-                        "🟢 <b>NimiQuant Engine Status:</b>\nOnline, fully operational, and monitoring multi-chain liquidity pools."
+                        "🟢 <b>NimiQuant Crypto Intelligence Engine Status:</b>\nOnline, fully operational, and monitoring multi-chain liquidity pools."
                     )
                     commands_processed += 1
                 elif "/scan" in text:
@@ -363,7 +363,7 @@ def evaluate_trade_setup(pool, daily_df, h4_df, min_vol_ratio):
 # =========================
 # STREAMLIT APP UI
 # =========================
-st.set_page_config(page_title="NimiQuant Multi-Chain Alpha", page_icon="⚡", layout="wide")
+st.set_page_config(page_title="NimiQuant Crypto Intelligence Engine", page_icon="⚡", layout="wide")
 
 if "sent_alerts" not in st.session_state:
     st.session_state.sent_alerts = set()
@@ -371,7 +371,18 @@ if "sent_alerts" not in st.session_state:
 if "portfolio" not in st.session_state:
     st.session_state.portfolio = []
 
-st.title("⚡ NimiQuant — Live Trade Scanner & Portfolio PnL Tracker")
+# --- MOBILE-OPTIMIZED TWO-TIER HEADER ---
+st.markdown("""
+    <div style="margin-bottom: 1.5rem;">
+        <h1 style="margin-bottom: 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; color: #FFFFFF;">
+            NimiQuant
+        </h1>
+        <p style="margin-top: 2px; font-size: 0.95rem; font-weight: 500; color: #94A3B8; letter-spacing: 0.5px; text-transform: uppercase;">
+            Crypto Intelligence Engine
+        </p>
+    </div>
+""", unsafe_allow_html=True)
+
 st.caption("High-Precision Dual-Timeframe Engine (20D / 7D / 4H) — Multi-Chain & Real-World Ready")
 
 with st.sidebar:
@@ -387,7 +398,7 @@ with st.sidebar:
         ok, info = send_telegram_message(
             tg_token,
             tg_chat_id,
-            "✅ <b>NimiQuant Connected!</b>\nYour live multi-chain breakout alerts are active and ready.",
+            "✅ <b>NimiQuant Crypto Intelligence Engine Connected!</b>\nYour live multi-chain breakout alerts are active and ready.",
         )
         if ok:
             st.success("Test alert delivered to your Telegram!")
@@ -556,4 +567,4 @@ with tab_portfolio:
 
         if st.button("🗑️ Clear Portfolio Log", type="secondary"):
             st.session_state.portfolio = []
-            st.rerun()
+            st.rerun()  
