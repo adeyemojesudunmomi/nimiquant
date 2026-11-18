@@ -1,0 +1,3 @@
+strategy,evaluations,mean_return_pct,median_return_pct,positive_evaluations_pct,worst_evaluation_pct,max_drawdown_pct,mean_of_trial_means_pct
+Momentum,431,0.214,-0.701,45.708,-30.07,-99.894,
+Random,43100,-0.558,-0.946,44.063,-34.321,-100.0,-0.558

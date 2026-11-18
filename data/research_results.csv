@@ -1,0 +1,2 @@
+hold_days,entry_rule,exit_rule,top_coins_per_day,model_avg_forward_return_pct,model_median_forward_return_pct,random_avg_forward_return_pct,random_95th_percentile_pct,difference_vs_random_pct_points,historical_signal_rows,selected_signal_rows,dates_evaluated,random_trials
+7,Next daily open,Close 7 days after entry,5,1.9192937322615882,-0.4535909281814243,0.8084805894255283,1.0096230658529048,1.11081314283606,74937,7165,1433,100

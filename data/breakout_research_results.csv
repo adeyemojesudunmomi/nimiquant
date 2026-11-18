@@ -1,0 +1,4 @@
+hold_days,signals_tested,win_rate_pct,average_gross_return_pct,average_net_return_pct,median_net_return_pct
+3,2645,49.11,2.309,2.002,-0.141
+5,2632,50.08,3.328,3.019,0.01
+7,2629,48.65,3.897,3.585,-0.424

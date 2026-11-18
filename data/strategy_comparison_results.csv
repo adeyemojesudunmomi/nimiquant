@@ -1,0 +1,4 @@
+strategy,dates_evaluated,average_daily_portfolio_return_pct,median_daily_portfolio_return_pct,positive_days_pct,period_average_return_95th_percentile_pct
+Momentum,1435,1.16,-0.058,49.477,
+Breakout,1435,0.765,0.0,23.693,
+Random,1435,0.28,-0.319,48.268,0.497
