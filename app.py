@@ -83,7 +83,7 @@ def format_trade_alert(signal):
     ca = html.escape(str(signal["Contract Address"]))
 
     return (
-        f"🚨 <b>NIMIQUANT ALPHA SIGNAL</b> 🚨\n\n"
+        f"🚨 <b>NIMIQUANT INTELLIGENCE ALERT</b> 🚨\n\n"
         f"🔥 <b>{sym}</b>  [<code>{net}</code>]\n"
         f"📊 <b>Setup:</b> {tier}\n"
         f"⭐ <b>Conviction Score:</b> {signal['Score']} / 100\n\n"
@@ -235,7 +235,7 @@ def handle_telegram_commands(bot_token, chat_id, min_vol_ratio, min_liquidity, m
                 if "/status" in text:
                     send_telegram_message(
                         bot_token, chat_id,
-                        "🟢 <b>NimiQuant Crypto Intelligence Engine Status:</b>\nOnline, fully operational, and monitoring multi-chain liquidity pools."
+                        "🟢 <b>NimiQuant Crypto Intelligence:</b>\nOnline, fully operational, and monitoring multi-chain liquidity pools."
                     )
                     commands_processed += 1
                 elif "/scan" in text:
@@ -371,14 +371,14 @@ if "sent_alerts" not in st.session_state:
 if "portfolio" not in st.session_state:
     st.session_state.portfolio = []
 
-# --- MOBILE-OPTIMIZED TWO-TIER HEADER ---
+# --- STYLISH INSTITUTIONAL HOME PAGE HEADER ---
 st.markdown("""
-    <div style="margin-bottom: 1.5rem;">
+    <div style="margin-bottom: 1.2rem;">
         <h1 style="margin-bottom: 0; font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; color: #FFFFFF;">
-            NimiQuant
+            NimiQuant Crypto Intelligence
         </h1>
-        <p style="margin-top: 2px; font-size: 0.95rem; font-weight: 500; color: #94A3B8; letter-spacing: 0.5px; text-transform: uppercase;">
-            Crypto Intelligence Engine
+        <p style="margin-top: 4px; font-size: 1rem; font-weight: 600; color: #38BDF8; letter-spacing: 0.3px;">
+            ⚡ Live Trade Scanner & Portfolio PnL Tracker
         </p>
     </div>
 """, unsafe_allow_html=True)
@@ -398,7 +398,7 @@ with st.sidebar:
         ok, info = send_telegram_message(
             tg_token,
             tg_chat_id,
-            "✅ <b>NimiQuant Crypto Intelligence Engine Connected!</b>\nYour live multi-chain breakout alerts are active and ready.",
+            "✅ <b>NimiQuant Crypto Intelligence Connected!</b>\nYour live multi-chain breakout alerts are active and ready.",
         )
         if ok:
             st.success("Test alert delivered to your Telegram!")
@@ -567,4 +567,4 @@ with tab_portfolio:
 
         if st.button("🗑️ Clear Portfolio Log", type="secondary"):
             st.session_state.portfolio = []
-            st.rerun()  
+            st.rerun()
